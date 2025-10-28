@@ -1,0 +1,21 @@
+---
+title: "your_package_name"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{your_package_name}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<https://github.com/rforbiodatascience25/group_12_package.git>
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CoolMolBio)
+```

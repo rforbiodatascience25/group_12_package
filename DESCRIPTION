@@ -29,3 +29,9 @@ LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Imports: 
+    ggplot2 (>= 3.5.1),
+    stringr (>= 1.5.1)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

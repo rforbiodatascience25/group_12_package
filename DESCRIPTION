@@ -23,6 +23,6 @@ Authors@R: c(person(given = "Sofie",
            role = "aut",
            email = "your@email.com"))
 Description:  The central dogma of molecular biology.
-License: What license is it under?
+License: Group 12
 Encoding: UTF-8
 LazyData: true

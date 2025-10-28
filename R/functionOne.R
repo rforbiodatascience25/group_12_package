@@ -2,7 +2,7 @@
 #'
 #' @param dnaSize
 #'
-#' @returns
+#' @returns dna
 #' @export
 #'
 #' @examples

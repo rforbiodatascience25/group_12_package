@@ -1,0 +1,28 @@
+Package: CoolMolBio
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: c(person(given = "Sofie",
+           family = "Hagelund",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s132347@dtu.dk"), 
+    person(given = "firstname",
+           family = "lastname",
+           role = "aut",
+           email = "your@email.com"),
+    person(given = "firstname",
+           family = "lastname",
+           role = "aut",
+           email = "your@email.com"),
+    person(given = "firstname",
+           family = "lastname",
+           role = "aut",
+           email = "your@email.com"),
+    person(given = "firstname",
+           family = "lastname",
+           role = "aut",
+           email = "your@email.com"))
+Description:  The central dogma of molecular biology.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true

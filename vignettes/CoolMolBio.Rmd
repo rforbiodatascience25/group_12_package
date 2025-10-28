@@ -44,11 +44,26 @@ The packages has 5 different functions explained in the following:
 
 ```
 
-### Function 3
+### Extract Codons from a Sequence
+This function extracts codons from a DNA coding sequence. You can specify the starting nucleotide to shift the reading frame (default is 1).
+Here are two examples:
 
-```{r}
+```{r extractCodon_examples}
+# Extract codons from default coding frame
+extractCodon("ATCGTC")
+#> [1] "ATC" "GTC"
 
+# Extract codons starting from the second nucleotide
+extractCodon("TATCGTC", 2)
+#> [1] "ATC" "GTC"
 ```
+The function returns a character vector of codons.
+If the sequence length is not a multiple of 3, it extracts as many full codons as possible, igonring any remainder.
+```{r}
+extractCodon("ATCGT")
+#> [1] "ATC"
+```
+
 
 ### Function 4
 

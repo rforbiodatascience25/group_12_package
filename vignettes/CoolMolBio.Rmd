@@ -56,10 +56,10 @@ The packages has 5 different functions explained in the following:
 
 ```
 
-### Function 5
+### createHistogram 
 
-description here
+This function generates a histogram that shows how often each nucleotide appears in a given DNA sequence. The output is a histogram where each bar represents one nucleotide.
 
 ```{r}
-
+createHistogram("ATGCGTTA")
 ```

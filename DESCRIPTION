@@ -22,7 +22,10 @@ Authors@R: c(person(given = "Sofie",
            family = "lastname",
            role = "aut",
            email = "your@email.com"))
-Description:  The central dogma of molecular biology.
+Description: The central dogma of molecular biology.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 3.5)
+RoxygenNote: 7.3.2

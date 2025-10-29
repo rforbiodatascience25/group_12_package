@@ -1,5 +1,5 @@
 ---
-title: "your_package_name"
+title: "Cool Mol Bio - Group 12"
 author: "s132347(Sofie Emilie Hagelund), s253710(Henrique Gomes), s253689(Paula Meerjanssen), s252750(Shuyue Zhang), s253719(Eszter Hudra)"
 output: rmarkdown::pdf_document
 vignette: >
@@ -23,9 +23,12 @@ The package provides a collection of functions to perform basic functions on DNA
 
 ## Installation
 
+the installation doesn't work
+
 ```{r}
+devtools::install_github("rforbiodatascience25/group_12_package")
 library(CoolMolBio)
-devtools::load_all() #not sure if necessary
+devtools::load_all()
 ```
 
 ## Functions
@@ -45,8 +48,8 @@ The packages has 5 different functions explained in the following:
 ```
 
 ### Extract Codons from a Sequence
-This function extracts codons from a DNA coding sequence. You can specify the starting nucleotide to shift the reading frame (default is 1).
-Here are two examples:
+
+This function extracts codons from a DNA coding sequence. You can specify the starting nucleotide to shift the reading frame (default is 1). Here are two examples:
 
 ```{r extractCodon_examples}
 # Extract codons from default coding frame
@@ -57,13 +60,13 @@ extractCodon("ATCGTC")
 extractCodon("TATCGTC", 2)
 #> [1] "ATC" "GTC"
 ```
-The function returns a character vector of codons.
-If the sequence length is not a multiple of 3, it extracts as many full codons as possible, igonring any remainder.
+
+The function returns a character vector of codons. If the sequence length is not a multiple of 3, it extracts as many full codons as possible, igonring any remainder.
+
 ```{r}
 extractCodon("ATCGT")
 #> [1] "ATC"
 ```
-
 
 ### Function 4
 
@@ -71,7 +74,7 @@ extractCodon("ATCGT")
 
 ```
 
-### createHistogram 
+### createHistogram()
 
 This function generates a histogram that shows how often each nucleotide appears in a given DNA sequence. The output is a histogram where each bar represents one nucleotide.
 

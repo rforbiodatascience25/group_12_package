@@ -35,7 +35,7 @@ devtools::load_all()
 
 The packages has 5 different functions explained in the following:
 
-### Function 1
+### Generate a DNA sequence of specified length
 
 This function generates a random DNA sequence of a specified length. It samples nucleotides ("A", "T", "G", "C") with replacement, meaning bases can repeat, and then concatenates them into a single string. For example, with a sequence size of 9, the output could be "AATGCCGTA".
 

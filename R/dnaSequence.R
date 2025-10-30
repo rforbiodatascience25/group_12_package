@@ -1,4 +1,4 @@
-#' Generates dna sequence from sample
+#' Generate a DNA sequence of specified length
 #'
 #' This function generates a random DNA sequence of a specified length.
 #' It samples nucleotides ("A", "T", "G", "C") with replacement, meaning

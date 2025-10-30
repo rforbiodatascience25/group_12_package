@@ -10,7 +10,6 @@
 #' @returns DNA - A character string representing a DNA sequence.
 #' @export
 #'
-#' @examples
 dnaSequence <- function(dnaSize){
   dnaTmp <- sample(c("A", "T", "G", "C"), size = dnaSize, replace = TRUE)
   dna <- paste0(dnaTmp, collapse = "")

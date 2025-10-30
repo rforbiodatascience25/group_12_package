@@ -4,7 +4,7 @@ Title: What the Package Does (Title Case)
 Version: 0.1.0
 Authors@R: c(person(given = "Sofie",
            family = "Hagelund",
-           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           role = c("aut", "cre"),
            email = "s132347@dtu.dk"), 
     person(given = "Eszter",
            family = "Hudra",
@@ -13,7 +13,7 @@ Authors@R: c(person(given = "Sofie",
     person(given = "Paula",
            family = "Meerjanssen",
            role = "aut",
-           email = s253689@dtu.dk"),
+           email = "s253689@dtu.dk"),
     person(given = "Shuyue",
            family = "Zhang",
            role = "aut",
@@ -31,5 +31,8 @@ Imports:
     ggplot2 (>= 3.5.1),
     stringr (>= 1.5.1)
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+VignetteBuilder: knitr

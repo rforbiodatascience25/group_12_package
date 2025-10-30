@@ -1,0 +1,87 @@
+---
+title: "diesdas"
+output: html_document
+---
+
+https://github.com/rforbiodatascience25/group_12_package.git
+
+{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+Overview
+
+The package provides a collection of functions to perform basic functions on DNA sequences, like Translation, plotting etc. .
+
+Installation
+
+installing the github
+
+{r}
+#| message : false
+devtools::install_github("rforbiodatascience25/group_12_package")
+```{r}
+
+```
+
+loading the library
+
+{r}
+library(CoolMolBio)
+
+Simulates library, us to use our functions
+
+{r}
+devtools::load_all()
+
+Functions
+
+The packages has 5 different functions explained in the following:
+
+Generate a DNA sequence of specified length
+
+This function generates a random DNA sequence of a specified length. It samples nucleotides ("A", "T", "G", "C") with replacement, meaning bases can repeat, and then concatenates them into a single string. For example, with a sequence size of 9, the output could be "AATGCCGTA".
+
+{r}
+dnaSequence(21)
+
+DNA to RNA converter
+
+This function receives a DNA strand as a string and converts all T's into U's, essentially turning it into an RNA strand. For example, the DNA strand "ATCTA" would become "AUCUA", while the strand "ACGCGA" would remain unchanged.
+
+{r}
+DNA_to_RNA("ATCGCTAG")
+
+Extract Codons from a Sequence
+
+This function extracts codons from a DNA coding sequence. You can specify the starting nucleotide to shift the reading frame (default is 1). Here are two examples:
+
+{r extractCodon_examples}
+# Extract codons from default coding frame
+extractCodon("ATCGTC")
+
+# Extract codons starting from the second nucleotide
+extractCodon("TATCGTC", 2)
+
+The function returns a character vector of codons. If the sequence length is not a multiple of 3, it extracts as many full codons as possible, igonring any remainder.
+
+{r}
+extractCodon("ATCGT")
+
+translation
+
+The translation function converts a vector of mRNA codons into their corresponding peptide sequence. It returns a single string representing the amino acid sequence.
+
+{r}
+translation(c("AUG", "GUC", "AUC"))
+translation(c("AUG", "UAA"))
+
+createHistogram()
+
+This function generates a histogram that shows how often each nucleotide appears in a given DNA sequence. The output is a histogram where each bar represents one nucleotide.
+
+{r}
+createHistogram("ATGCGTTA")
+

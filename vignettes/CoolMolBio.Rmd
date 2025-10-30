@@ -3,7 +3,7 @@ title: "Cool Mol Bio - Group 12"
 author: "s132347(Sofie Emilie Hagelund), s253710(Henrique Gomes), s253689(Paula Meerjanssen), s252750(Shuyue Zhang), s253719(Eszter Hudra)"
 output: rmarkdown::pdf_document
 vignette: >
-  %\VignetteIndexEntry{your_package_name}
+  %\VignetteIndexEntry{CoolMolBio}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -50,24 +50,15 @@ The packages has 5 different functions explained in the following:
 This function generates a random DNA sequence of a specified length. It samples nucleotides ("A", "T", "G", "C") with replacement, meaning bases can repeat, and then concatenates them into a single string. For example, with a sequence size of 9, the output could be "AATGCCGTA".
 
 ```{r}
-dnaSequence <- function(dnaSize){
-  dnaTmp <- sample(c("A", "T", "G", "C"), 
-                   size = dnaSize, 
-                   replace = TRUE)
-  dna <- paste0(dnaTmp, 
-                collapse = "")
-  return(dna)
-}
+dnaSequence(21)
 ```
 
 ### DNA to RNA converter
+
 This function receives a DNA strand as a string and converts all T's into U's, essentially turning it into an RNA strand. For example, the DNA strand "ATCTA" would become "AUCUA", while the strand "ACGCGA" would remain unchanged.
 
 ```{r}
-DNA_to_RNA <- function(DNA_string){
-  RNA_string <- gsub("T", "U", DNA_string)
-  return(RNA_string)
-}
+DNA_to_RNA("ATCGCTAG")
 ```
 
 ### Extract Codons from a Sequence
@@ -91,10 +82,12 @@ extractCodon("ATCGT")
 #> [1] "ATC"
 ```
 
-### Function 4
+### Translation
+
+This function translates mRNA to a peptide according to the codon table.
 
 ```{r}
-
+translation("AAUGCUAGCU")
 ```
 
 ### createHistogram()

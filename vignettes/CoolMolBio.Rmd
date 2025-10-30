@@ -60,10 +60,14 @@ dnaSequence <- function(dnaSize){
 }
 ```
 
-### Function 2
+### DNA to RNA converter
+This function receives a DNA strand as a string and converts all T's into U's, essentially turning it into an RNA strand. For example, the DNA strand "ATCTA" would become "AUCUA", while the strand "ACGCGA" would remain unchanged.
 
 ```{r}
-
+DNA_to_RNA <- function(DNA_string){
+  RNA_string <- gsub("T", "U", DNA_string)
+  return(RNA_string)
+}
 ```
 
 ### Extract Codons from a Sequence

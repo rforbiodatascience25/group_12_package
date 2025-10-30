@@ -39,7 +39,7 @@ This function generates a random DNA sequence of a specified length. It samples 
 dnaSequence(21)
 ```
 
-### 2. DNA_to_RNA
+### 2. transcription()
 
 This function receives a DNA strand as a string and converts all T's into U's, essentially turning it into an RNA strand. For example, the DNA strand "ATCTA" would become "AUCUA", while the strand "ACGCGA" would remain unchanged.
 

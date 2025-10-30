@@ -26,6 +26,7 @@ The package provides a collection of functions to perform basic functions on DNA
 installing the github
 
 ```{r}
+#| message : false
 devtools::install_github("rforbiodatascience25/group_12_package")
 ```
 
@@ -68,26 +69,24 @@ This function extracts codons from a DNA coding sequence. You can specify the st
 ```{r extractCodon_examples}
 # Extract codons from default coding frame
 extractCodon("ATCGTC")
-#> [1] "ATC" "GTC"
 
 # Extract codons starting from the second nucleotide
 extractCodon("TATCGTC", 2)
-#> [1] "ATC" "GTC"
 ```
 
 The function returns a character vector of codons. If the sequence length is not a multiple of 3, it extracts as many full codons as possible, igonring any remainder.
 
 ```{r}
 extractCodon("ATCGT")
-#> [1] "ATC"
 ```
 
-### Translation
+### translation
 
-This function translates mRNA to a peptide according to the codon table.
+The translation function converts a vector of mRNA codons into their corresponding peptide sequence. It returns a single string representing the amino acid sequence.
 
 ```{r}
-translation("AAUGCUAGCU")
+translation(c("AUG", "GUC", "AUC"))
+translation(c("AUG", "UAA"))
 ```
 
 ### createHistogram()

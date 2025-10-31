@@ -76,3 +76,31 @@ This function generates a histogram that shows how often each nucleotide appears
 ```{r}
 createHistogram("ATGCGTTA")
 ```
+
+## Use Cases and Future Extensions
+
+-   **Teaching tool**: Ideal for classroom use to demonstrate DNA sequence analysis concepts.
+-   **Quick sequence inspection**: Useful for researchers needing fast insights without complex bioinformatics tools.
+-   **Data validation**: Helps verify sequence quality before downstream analyses like alignment or motif detection.
+
+## Potential Future Functions
+
+-   **`reverseComplement(dna_seq)`**: Get the reverse complement of DNA.
+-   **`exportResults(summary, file = "results.csv")`**: Write counts/histograms to CSV/PNG for downstream use.
+-   **`codonUsage()`**: Analyse codon frequency bias.
+
+## Main points from Task 3 (summary)
+
+-   The package’s goal is to simplify basic DNA → RNA → protein operations and visualisations for learners and prototypers.
+-   It emphasises ease of use and interpretability: small functions, clear inputs/outputs, and simple visual outputs.
+
+**Limiting dependencies:**
+
+-   Fewer dependencies make our package more stable, faster to install, and easier to maintain. Each extra dependency adds potential for version conflicts or breakages.
+
+@importFrom **vs. `package::function()`**
+
+-   @importFrom package function imports a function so it can be used directly without the `::` prefix\
+    It is useful for frequent use but less explicit.
+-   `package::function()` calls the function directly from another package without importing\
+    It is clearer and safer for occasional use.

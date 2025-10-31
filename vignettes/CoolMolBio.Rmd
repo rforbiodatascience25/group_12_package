@@ -83,9 +83,6 @@ This function generates a histogram that shows how often each nucleotide appears
 ```{r}
 createHistogram("ATGCGTTA")
 ```
-<<<<<<< HEAD
-  
-=======
 
 ## Use Cases and Future Extensions
 
@@ -114,4 +111,3 @@ createHistogram("ATGCGTTA")
     It is useful for frequent use but less explicit.
 -   `package::function()` calls the function directly from another package without importing\
     It is clearer and safer for occasional use.
->>>>>>> 6d137baeda763f4b2fb74945fe2583de1b25a8f4

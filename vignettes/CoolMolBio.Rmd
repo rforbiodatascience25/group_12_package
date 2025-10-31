@@ -83,3 +83,4 @@ This function generates a histogram that shows how often each nucleotide appears
 ```{r}
 createHistogram("ATGCGTTA")
 ```
+  

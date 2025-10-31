@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-https://github.com/rforbiodatascience25/group_12_package.git
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -13,43 +13,66 @@ knitr::opts_chunk$set(
 )
 ```
 
-# CoolMolBio
+## Overview
 
-<!-- badges: start -->
-<!-- badges: end -->
-
-The goal of CoolMolBio is to ...
+The aim of this simple R package is to replicate the central dogma of molecular biology. The package provides a collection of functions that help visualise and summarise nucleotide data and perform basic functions on DNA sequences, like transcription, translation, plotting, etc.
 
 ## Installation
 
-You can install the development version of CoolMolBio from [GitHub](https://github.com/) with:
+load the library
 
-``` r
-# install.packages("pak")
-pak::pak("rforbiodatascience25/group_12_package")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
+```{r setup}
 library(CoolMolBio)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Functions
 
-```{r cars}
-summary(cars)
+The packages has 5 different functions explained in the following:
+
+### 1. dnaSequence()
+
+This function generates a random DNA sequence of a specified length. It samples nucleotides ("A", "T", "G", "C") with replacement, meaning bases can repeat, and then concatenates them into a single string.
+
+```{r}
+dnaSequence(21)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+### 2. transcription()
 
-You can also embed plots, for example:
+This function receives a DNA strand as a string and converts all T's into U's, turning it into an RNA strand.
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r}
+transcription("ATCGCTAG")
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+### 3. extractCodon()
+
+This function extracts codons from a DNA coding sequence. You can specify the starting nucleotide to shift the reading frame (default is 1). If the sequence length is not a multiple of 3, it extracts as many full codons as possible.
+
+Extract codons from default coding frame:
+
+```{r}
+extractCodon("ATCGTC")
+```
+
+Extract codons starting from the second nucleotide:
+
+```{r}
+extractCodon("TATCGTC", 2)
+```
+
+### 4. translation()
+
+The translation function converts mRNA codons into their a peptide sequence.
+
+```{r}
+translation(c("AUG", "GUC", "AUC"))
+```
+
+### 5. createHistogram()
+
+This function generates a histogram that shows how often each nucleotide appears in a given DNA sequence. The output is a histogram where each bar represents one nucleotide.
+
+```{r}
+createHistogram("ATGCGTTA")
+```

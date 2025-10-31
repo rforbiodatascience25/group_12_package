@@ -1,5 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+It took as a fairly long time to figure out how to create the PDF but 
+we did figure it out in the end, unfortunately it is 2 hours after the 
+hand in time. Since the doc folder can not be seen in github I added the 
+PDF manually and this README file also has the exact same content so you 
+could also see what the PDF looks like by looking at it.
 
 ## Overview
 

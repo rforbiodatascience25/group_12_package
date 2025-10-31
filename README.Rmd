@@ -13,6 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+It took as a fairly long time to figure out how to create the PDF but we did figure it out in the end, unfortunately it is 2 hours after the hand in time. Since the doc folder can not be seen in github I added the PDF manually and this README file also has the exact same content so you could also see what the PDF looks like by looking at it.
+
 ## Overview
 
 The aim of this simple R package is to replicate the central dogma of molecular biology. The package provides a collection of functions that help visualise and summarise nucleotide data and perform basic functions on DNA sequences, like transcription, translation, plotting, etc.

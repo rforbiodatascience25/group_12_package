@@ -1,6 +1,11 @@
 ---
 title: "CoolMolBio"
-author: "s132347 (Sofie Emilie Hagelund), s253710 (Henrique Gomes), s253689 (Paula Meerjanssen), s252750 (Shuyue Zhang), s253719 (Eszter Hudra)"
+author: 
+  - "s132347 (Sofie Emilie Hagelund)"
+  - "s253710 (Henrique Gomes)"
+  - "s253689 (Paula Meerjanssen)"
+  - "s252750 (Shuyue Zhang)"
+  - "s253719 (Eszter Hudra)"
 output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{CoolMolBio}
@@ -17,7 +22,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The package provides a collection of functions to perform basic functions on DNA sequences, like Translation, plotting etc. .
+The aim of this simple R package is to replicate the central dogma of molecular biology. The package provides a collection of functions that help visualise and summarise nucleotide data and perform basic functions on DNA sequences, like transcription, translation, plotting, etc.
 
 ## Installation
 

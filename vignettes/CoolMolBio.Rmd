@@ -1,7 +1,7 @@
 ---
 title: "CoolMolBio"
 author: "s132347 (Sofie Emilie Hagelund), s253710 (Henrique Gomes), s253689 (Paula Meerjanssen), s252750 (Shuyue Zhang), s253719 (Eszter Hudra)"
-output: rmarkdown::pdf_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{CoolMolBio}
   %\VignetteEngine{knitr::rmarkdown}
@@ -44,7 +44,7 @@ dnaSequence(21)
 This function receives a DNA strand as a string and converts all T's into U's, turning it into an RNA strand.
 
 ```{r}
-DNA_to_RNA("ATCGCTAG")
+transcription("ATCGCTAG")
 ```
 
 ### 3. extractCodon()
